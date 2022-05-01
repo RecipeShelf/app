@@ -1,13 +1,9 @@
 module default {
   type RecipeBook {
-    required property name => str {
-      constraint max_len_value(64);
-    }
+    required property name -> str;
 
-    property description => str {
-      constraint max_len_value(1024);
-    }
+    property description -> str;
 
-    required multi link recipes => Recipe;
+    required multi link recipes -> Recipe;
   }
 }

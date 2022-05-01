@@ -1,0 +1,35 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# defaults
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# EdgeDB Schema Definition Language
+# https://www.edgedb.com/docs/datamodel/index
+[*.esdl]
+indent_style = space
+indent_size = 2
+
+# Go
+# https://golang.org/cmd/gofmt/
+[{go.mod,*.go}]
+indent_style = tab
+
+# TOML
+# https://github.com/toml-lang/toml/tree/master/examples
+[*.toml]
+indent_size = 2
+indent_style = space
+
+# Markdown
+# https://github.com/markdown-it/markdown-it/blob/master/.editorconfig
+[*.{md,txt}]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = false

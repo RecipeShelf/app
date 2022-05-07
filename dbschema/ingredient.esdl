@@ -13,5 +13,7 @@ module default {
     required property last_modified -> datetime;
 
     multi link ingredient_recipes := .<ingredients[is Recipe];
+
+    property external_id -> str;
   }
 }

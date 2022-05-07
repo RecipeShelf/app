@@ -18,5 +18,7 @@ module default {
 
       property level -> IngredientLevel;
     }
+
+    property external_id -> str;
   }
 }

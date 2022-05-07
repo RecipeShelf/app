@@ -42,6 +42,8 @@ module default {
 
     required property last_modified -> datetime;
 
-    property external_id -> str;
+    property external_id -> str {
+      constraint exclusive;
+    }
   }
 }

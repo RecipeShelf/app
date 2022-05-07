@@ -14,6 +14,8 @@ module default {
 
     multi link ingredient_recipes := .<ingredients[is Recipe];
 
-    property external_id -> str;
+    property external_id -> str {
+      constraint exclusive;
+    }
   }
 }

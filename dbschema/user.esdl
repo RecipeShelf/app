@@ -19,6 +19,8 @@ module default {
       property level -> IngredientLevel;
     }
 
-    property external_id -> str;
+    property external_id -> str {
+      constraint exclusive;
+    }
   }
 }

@@ -34,9 +34,9 @@ module default {
 
     multi link accompaniments -> Recipe;
 
-    link chef -> User;
+    link owner -> User;
 
-    required property approved -> bool {
+    required property public -> bool {
       default := false;
     }
 

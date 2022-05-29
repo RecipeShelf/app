@@ -8,7 +8,7 @@ module default {
 
     property spice_level -> SpiceLevel;
 
-    property total_time_in_minutes -> int16;
+    property total_time -> duration;
 
     property overnight_preparation -> bool;
 
@@ -26,9 +26,15 @@ module default {
 
     property image_id -> str;
 
-    property ingredient_items -> array<json>;
+    multi link ingredient_instructions -> Instruction {
+      constraint exclusive;
+      property order_number -> int16;
+    }
 
-    property recipe_steps -> array<json>;
+    multi link recipe_instructions -> Instruction {
+      constraint exclusive;
+      property order_number -> int16;
+    }
 
     multi link ingredients -> Ingredient;
 
